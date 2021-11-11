@@ -13,7 +13,7 @@ impl Edge {
     }
 }
 
-pub type Graph = Vec<Vec<Edge>>;
+pub type Graph = [Vec<Edge>];
 pub fn dijkstra(graph: &Graph, start: usize) -> Vec<usize> {
     let inf = 1 << 60;
     let len = graph.len();
@@ -44,7 +44,7 @@ mod tests {
     #[test]
     fn dijkstra_test() {
         let start = 0;
-        let mut graph: Graph = vec![vec![]; 5];
+        let mut graph = vec![vec![]; 5];
         graph[0].push(Edge::new(1, 2));
         graph[1].push(Edge::new(4, 5));
         graph[1].push(Edge::new(2, 4));

@@ -2,14 +2,13 @@ use std::cmp::Reverse;
 use std::collections::BinaryHeap;
 
 /// 辞書順で出力するトポロジカルソート
-pub type Graph = Vec<Vec<usize>>;
+pub type Graph = [Vec<usize>];
 pub fn topological_sort(graph: &Graph, in_degree: &mut Vec<usize>) -> Vec<usize> {
     let mut sorted_vertices = vec![];
     let mut heap = BinaryHeap::new();
-    let len = graph.len();
 
-    for i in 0..len {
-        if in_degree[i] == 0 {
+    for (i, indeg) in in_degree.iter().enumerate() {
+        if *indeg == 0 {
             heap.push(Reverse(i));
         }
     }
@@ -31,7 +30,7 @@ mod tsets {
     use super::*;
     #[test]
     fn topological_sort_test() {
-        let mut graph: Graph = vec![vec![]; 9];
+        let mut graph = vec![vec![]; 9];
         graph[1].push(6);
         graph[2].push(5);
         graph[3].push(1);
