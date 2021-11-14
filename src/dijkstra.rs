@@ -37,7 +37,6 @@ pub fn dijkstra(graph: &Graph, start: usize) -> Vec<usize> {
     dist
 }
 
-
 #[cfg(test)]
 mod tests {
     use super::*;
