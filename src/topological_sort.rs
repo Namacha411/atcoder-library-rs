@@ -25,6 +25,13 @@ pub fn topological_sort(graph: &Graph, in_degree: &mut Vec<usize>) -> Vec<usize>
     sorted_vertices
 }
 
+#[macro_export]
+macro_rules! add_edge{
+    ($graph:expr, $from:expr => $to:expr) => {
+        $graph[$from].push($to)
+    };
+}
+
 #[cfg(test)]
 mod tsets {
     use super::*;
