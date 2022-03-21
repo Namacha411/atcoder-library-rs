@@ -39,7 +39,7 @@ macro_rules! impl_integer {
                         res.push((n, 1));
                     }
                     res
-               }
+                }
             }
         )*
     };
