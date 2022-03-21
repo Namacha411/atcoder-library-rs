@@ -1,3 +1,4 @@
-pub mod dijkstra;
-pub mod topological_sort;
-pub mod prime;
+pub mod graph;
+pub mod math;
+pub mod data_struct;
+pub mod algo;
