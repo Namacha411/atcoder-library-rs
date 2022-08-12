@@ -1,6 +1,6 @@
 /// 辞書順で出力するトポロジカルソート
 pub type Graph = [Vec<usize>];
-pub fn topological_sort(graph: &Graph, in_degree: &mut Vec<usize>) -> Vec<usize> {
+pub fn topological_sort(graph: &Graph, in_degree: &mut [usize]) -> Vec<usize> {
     use std::cmp::Reverse;
     use std::collections::BinaryHeap;
 
