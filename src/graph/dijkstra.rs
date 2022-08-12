@@ -1,6 +1,3 @@
-use std::cmp::Reverse;
-use std::collections::BinaryHeap;
-
 #[derive(Clone, Copy, Debug)]
 pub struct Edge {
     to: usize,
@@ -15,6 +12,9 @@ impl Edge {
 
 pub type Graph = [Vec<Edge>];
 pub fn dijkstra(graph: &Graph, start: usize) -> Vec<usize> {
+    use std::cmp::Reverse;
+    use std::collections::BinaryHeap;
+
     let inf = 1 << 60;
     let len = graph.len();
     let mut dist = vec![inf; len];
@@ -36,6 +36,7 @@ pub fn dijkstra(graph: &Graph, start: usize) -> Vec<usize> {
 
     dist
 }
+
 
 #[cfg(test)]
 mod tests {
