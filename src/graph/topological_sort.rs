@@ -1,9 +1,9 @@
-use std::cmp::Reverse;
-use std::collections::BinaryHeap;
-
 /// 辞書順で出力するトポロジカルソート
 pub type Graph = [Vec<usize>];
-pub fn topological_sort(graph: &Graph, in_degree: &mut Vec<usize>) -> Vec<usize> {
+pub fn topological_sort(graph: &Graph, in_degree: &mut [usize]) -> Vec<usize> {
+    use std::cmp::Reverse;
+    use std::collections::BinaryHeap;
+
     let mut sorted_vertices = vec![];
     let mut heap = BinaryHeap::new();
 
@@ -25,15 +25,9 @@ pub fn topological_sort(graph: &Graph, in_degree: &mut Vec<usize>) -> Vec<usize>
     sorted_vertices
 }
 
-#[macro_export]
-macro_rules! add_edge{
-    ($graph:expr, $from:expr => $to:expr) => {
-        $graph[$from].push($to)
-    };
-}
 
 #[cfg(test)]
-mod tsets {
+mod tests {
     use super::*;
     #[test]
     fn topological_sort_test() {
