@@ -3,3 +3,5 @@ pub mod math;
 pub mod data_struct;
 pub mod algo;
 pub mod string;
+
+pub mod template;
