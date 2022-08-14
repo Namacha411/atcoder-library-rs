@@ -4,6 +4,7 @@
   - [binary_search](src/algo/binary_search.rs)
 - [data_struct](src/data_struct/)
   - [union_find](src/data_struct/union_find.rs)
+  - [BIT](src/data_struct/bit.rs)
 - [graph](src/graph/)
   - [dijkstra](src/graph/dijkstra.rs)
   - [topological_sort](src/graph/topological_sort.rs)
