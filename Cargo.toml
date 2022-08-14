@@ -1,5 +1,5 @@
 [package]
-name = "kyopro_lib"
+name = "atcoder-library"
 version = "0.1.0"
 edition = "2018"
 
