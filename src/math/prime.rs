@@ -57,16 +57,7 @@ impl Eratosthenes {
     }
 
     pub fn get_primes(&self, range: std::ops::Range<usize>) -> Vec<usize> {
-        self.is_prime.iter()
-            .enumerate()
-            .collect::<Vec<_>>()
-            .as_slice()
-            .get(range)
-            .unwrap()
-            .iter()
-            .filter(|(_i, x)| **x)
-            .map(|(i, _x)| *i)
-            .collect::<Vec<_>>()
+        range.filter(|x| self.is_prime(*x)).collect()
     }
 }
 
