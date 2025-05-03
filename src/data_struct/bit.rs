@@ -3,7 +3,7 @@
 //! 数列 $a_1, a_2, a_3, \cdots , a_n$ が与えられたとき以下の様なことができる
 //! - iとxが与えられたとき、$a_i$にxを加算する
 //! - iが与えられたとき、$a_1 + a_2 + a_3 + \cdots + a_n$を求める
-//! 計算量は$O(log(N))$
+//! - 計算量は$O(log(N))$
 
 type T = usize;
 #[derive(Clone, Debug)]

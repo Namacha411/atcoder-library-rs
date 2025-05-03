@@ -12,3 +12,7 @@
   - [run_length](src/string/run_length.rs)
 - [math](src/math/)
   - [prime](src/math/prime.rs)
+- [util](src/util/)
+  - [rotate](src/math/rotate.rs)
+  - [macro](src/math/macros.rs)
+  - [vec ext](src/math/vec_ext.rs)
